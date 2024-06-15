@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENDING MACHINE DASHBOARD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a7ff4a51d6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="chart js/revenuemonth.js" defer></script>
+    <script src="chart js/revenuelocation.js" defer></script>
+    <script src="chart js/categoryproduct.js" defer></script>
+    <script src="chart js/categorytransaction.js" defer></script>
+    <script src="chart js/productseason.js" defer></script>
+    <script src="chart js/datatables.js"></script>
+    <script src="navbar.js"></script>
+    <script src="chart js/chartcanvas.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">VENDING MACHINE DASHBOARD</a>
+        <nav class="navbar">
+            <ul class="links nav_links">
+                <li><a href="#gtk" class="active">Get To Know</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#revenue">Revenue</a></li>
+                <li><a href="#category">Category</a></li>
+                <li><a href="#product">Product</a></li>
+            </ul>
+        </nav>
+        <a class="action_btn" href="index2.html">About Us</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    
+        <div class="dropdown_menu">
+            <ul>
+                <li><a href="#gtk">Get To Know</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#revenue">Revenue</a></li>
+                <li><a href="#category">Category</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="index2.html" class="action_btn">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+     
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <main>
+            <div class="card">
+                <div class="image-container">
+                    <img src="img/machine2.png" alt="Vending Machine" style="width: 270px; height: 382px;">
+                    <img src="img/peta.png" alt="Peta Lokasi" style="width: 118px; height: 180px;">
+                </div>
+                <div class="text-container">
+                    <h2>Get To Know</h2>
+                    <br>
+                    <p>The data visualization on this website represents the dataset of vending machines distributed across four different locations in New Jersey, United States.</p>
+                    <p>With data visualization, the company aims to gain insights into the product sales data from the vending machines. This, in turn, is expected to help the company increase revenue from vending machine product sales in the future.</p>
+                </div>
+            </div>
+          </main>
+          </div>
+    
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <main>
+            <div class="card">
+              <h1 class="text-card">Location</h1>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="img/Brunswick SQ Mall.jpg" alt="Brunswick" style="width:200px;height:200px;"><div class="text">Brunswick SQ Mall</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <h3>Brunswick SQ Mall</h3>
+                    <p>Mall with average foot traffic 7 days a week.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="img/Earle Asphalt.jpg" alt="Earle" style="width:200px;height:200px;"><div class="text">Earle Asphalt</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <h3>Earle Asphalt</h3>
+                    <p>A construction engineering firm that operates 5 days a week.</p>
+                  </div>
+                </div>
+              </div>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="img/EB Public Library.jpg" alt="The" style="width:200px;height:200px;"><div class="text">EB Public Library</div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>EB Public Library</h3>
+                      <p> Public library that has high foot traffic 5-6 days a week.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="img/Gutten Plans.jpg" alt="Gutten" style="width:200px;height:200px;"><div class="text">Gutten Plans</div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>Gutten Plans</h3>
+                      <p>Frozen dough specialist company that operates 24/5.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </main>
+        </div>
+    
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <main>
+            <div class="card">
+              <h1 class="text-card">Product Category</h1>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="img/food.jpg" alt="Brunswick" style="width:200px;height:200px;"><div class="text2">Food</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <h3>Food</h3>
+                    <p>Food items in vending machines typically include a variety of snacks.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="img/carbonated.jpg" alt="Earle" style="width:200px;height:200px;"><div class="text2">Carbonated</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <h3>Carbonated</h3>
+                    <p>Carbonated beverages are drinks that contain dissolved carbon dioxide gas, making them fizzy.</p>
+                  </div>
+                </div>
+              </div>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="img/noncarbonated.png" alt="The" style="width:200px;height:200px;"><div class="text2">Non Carbonated</div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>Non Carbonated</h3>
+                      <p>Non-carbonated beverages encompass a broad spectrum of drinks that do not contain carbon dioxide.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="img/water.jpg" alt="Gutten" style="width:200px;height:200px;"><div class="text2">Water</div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>Water</h3>
+                      <p>Water is plain bottled water as well as mineral water</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </main>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev-card" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next-card" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <script src="script.js"></script>
+
+    <hr class="hr">
+<section>
+    <div class="body-chart" id="overview">
+        <div class="filter-section">
+            <p class="section-text">Overview</p>
+        </div>
+        <div id = "overview" >
+            <div class = "overview-main1">
+                <div class = "revenue"><img src = "img/revenue.png"></div>
+                <br>
+                <div class = "locationnumber"><img src = "img/locationnumber.png"></div>
+            </div>
+            <div class = "overview-main2">
+                <div class = "totalofproducts"><img src = "img/totalofproducts.png"></div>
+                <br>
+                <div class = "mostpopularcategory"><img src = "img/mostpopularcategory.png"></div>
+            </div>
+            <div class = "overview-main3">
+                <div class = "daterange"><img src = "img/daterange.png"></div>
+                <br>
+                <div class = "highestmonthrevenue"><img src = "img/highestmonthrevenue.png"></div>
+            </div>
+            <div class = "overview-main4">
+                <div class = "peakseasonrevenue"><img src = "img/peakseasonrevenue.png"></div>
+                <br>
+                <div class = "favoredpayment"><img src = "img/favoredpayment.png"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="hr">
+<section>
+<div class="body-chart" id="revenue">
+    <div class="filter-section">
+        <p class="section-text">Revenue</p>
+    </div>
+    <div class="container-chart">
+        <div class="chart-container">
+            <h3 class="chart-title">Revenue per Month</h3>
+            <div class="filters">
+                <select class="dropdown" id="location-filter">
+                    <option value="">All Location</option>
+                    <option value="GuttenPlans">Gutten Plans</option>
+                    <option value="EB Public Library">EB Public Library</option>
+                    <option value="Brunswick Sq Mall">Brunswick Sq Mall</option>
+                    <option value="Earle Asphalt">Earle Asphalt</option>
+                </select>
+            </div>
+            <canvas id="lineChart"></canvas>
+        </div>   
+        <div class="chart-container">
+            <h3 class="chart-title">Total Revenue of Location</h3>
+            <div class="filters">
+                <select class="dropdown" id="month-filter">
+                    <option value="">All Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+            <canvas id="barChart"></canvas>
+        </div>
+    </div>
+</div>
+</section>
+
+<hr class="hr">
+<section>
+<div class="body-chart" id="category">
+    <div class="filter-section">
+        <p class="section-text">Category</p>
+    </div>
+    <div class="container-chart">
+        <div class="chart-container">
+            <h3 class="chart-title">Total Products by Category and Location</h3>
+            <br>
+            <br>
+            <br>
+            <canvas id="stackedBar"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3 class="chart-title">Total Transaction by Product Category</h3>
+            <div class="filters">
+                <select class="dropdown" id="month-filter-category2">
+                    <option value="">All Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select class="dropdown" id="location-filter-category2">
+                    <option value="">All Location</option>
+                    <option value="GuttenPlans">Gutten Plans</option>
+                    <option value="EB Public Library">EB Public Library</option>
+                    <option value="Brunswick Sq Mall">Brunswick Sq Mall</option>
+                    <option value="Earle Asphalt">Earle Asphalt</option>
+                </select>
+            </div>
+            <canvas id="pieChart"></canvas>
+        </div>   
+    </div>
+</div>
+</section>
+
+<hr class="hr">
+<section>
+<div class="body-chart" id="product">
+    <div class="filter-section">
+        <p class="section-text">Product</p>
+    </div>
+    <div class="container-chart">
+        <div class="chart-table-container">
+            <h3 class="chart-title">Top 10 Product</h3>
+            <div class="filters">
+                <select class="dropdown" id="month-filter-product">
+                    <option value="">All Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select class="dropdown" id="location-filter-producttop">
+                    <option value="">All Location</option>
+                    <option value="GuttenPlans">Gutten Plans</option>
+                    <option value="EB Public Library">EB Public Library</option>
+                    <option value="Brunswick Sq Mall">Brunswick Sq Mall</option>
+                    <option value="Earle Asphalt">Earle Asphalt</option>
+                </select>
+            </div>
+            <table id="top" class="display">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="chart-table-container">
+            <h3 class="chart-title">Product per Season</h3>
+            <div class="filters">
+                <select class="dropdown" id="location-filter-product">
+                    <option value="">All Location</option>
+                    <option value="GuttenPlans">Gutten Plans</option>
+                    <option value="EB Public Library">EB Public Library</option>
+                    <option value="Brunswick Sq Mall">Brunswick Sq Mall</option>
+                    <option value="Earle Asphalt">Earle Asphalt</option>
+                </select>
+            </div>
+            <canvas id="100stackedChart" class="extra-height"></canvas>
+        </div>
+    </div>
+</div>
+</section>
+    
+    <br>
+    <br>
+<section>
+    <footer>
+        <div class="footer-content">
+            <div class="col-1"></div>
+            <div class="col-2">
+                <h3>Team 1 Jakarta</h3>
+                <p>This website is part of the Capstone Project  Software Engineering Kampus Merdeka Studi Independen RevoU.</p>
+                <div class="socials">
+                <a href="https://github.com/Kampus-Merdeka-Software-Engineering/km-feb24-jakarta-1"><i class="fa-brands fa-github fa-1.5x" style="color: #000000;"></i></a>
+                </div>
+            </div>
+            <div class="col-3">
+                <h3>Any Feedbacks?</h3>
+            <form id="feedbackForm">
+                <input type="text" placeholder="Share Your Thoughts" id="feedback" required>
+                <br>
+                <button type="submit" id="submit-form">Submit</button>
+            </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright 2024 Team 1 Jakarta</p>
+        </div>
+    </footer>
+    <div id="popup" class="popup">
+      <p>Thank you for your feedback!</p>
+    </div>
+</section>
+
+</body>
+</html>
